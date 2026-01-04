@@ -7,24 +7,24 @@
 <style>
 body{
   margin:0;
-  background:#0b0b0b;
+  background:#0a0a0a;
   color:#fff;
   font-family:Arial, sans-serif;
 }
 
 header{
-  text-align:center;
-  padding:15px;
-  font-size:22px;
-  font-weight:bold;
   background:#000;
+  padding:15px;
+  text-align:center;
+  font-size:22px;
+  letter-spacing:1px;
 }
 
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fill, minmax(150px,1fr));
-  gap:10px;
-  padding:10px;
+  gap:12px;
+  padding:12px;
 }
 
 .card{
@@ -34,4 +34,49 @@ header{
 }
 
 .card img{
-  width
+  width:100%;
+  display:block;
+}
+
+.card a{
+  display:block;
+  text-decoration:none;
+  color:#fff;
+  text-align:center;
+  padding:8px;
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>DARK NEXT VIDEO</header>
+
+<div class="grid">
+
+  <div class="card">
+    <a href="play.html">
+      <img src="https://via.placeholder.com/300x200?text=Video+1">
+      Watch
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="play.html">
+      <img src="https://via.placeholder.com/300x200?text=Video+2">
+      Watch
+    </a>
+  </div>
+
+  <div class="card">
+    <a href="play.html">
+      <img src="https://via.placeholder.com/300x200?text=Video+3">
+      Watch
+    </a>
+  </div>
+
+</div>
+
+</body>
+</html>  width
