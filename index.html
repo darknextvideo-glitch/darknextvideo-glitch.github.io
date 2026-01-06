@@ -6,35 +6,113 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-/* ===== GLOBAL ===== */
-*{
-  box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
 body{
-  margin:0;
-  height:100vh;
-  background:#000;
-  color:#fff;
-  font-family:Arial, sans-serif;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+    background:#000;
+    color:#fff;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
+.container{text-align:center;}
 
-/* ===== MAIN BOX ===== */
-.container{
-  text-align:center;
-  width:90%;
-  max-width:360px;
-}
-
-/* ===== LOGO ===== */
-.logo{
-  width:140px;
-  margin:0 auto 18px;
-}
 .logo img{
-  width:100%;
+    width:140px;
+    max-width:80%;
+    margin-bottom:20px;
+}
+
+.warning{
+    color:red;
+    font-size:22px;
+    text-shadow:0 0 12px red;
+    margin-bottom:25px;
+}
+
+.buttons{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    margin-bottom:25px;
+}
+
+.btn{
+    padding:14px 34px;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:12px;
+    background:transparent;
+    cursor:pointer;
+}
+
+.green{
+    border:2px solid #00ff66;
+    color:#00ff66;
+}
+.red{
+    border:2px solid red;
+    color:red;
+}
+.green:hover{background:#00ff6630;}
+.red:hover{background:#ff000030;}
+
+.network{
+    font-size:14px;
+    margin-top:10px;
+}
+
+.circle{
+    display:inline-block;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    border:2px solid;
+    margin-right:6px;
+}
+.orange{color:orange;border-color:orange;}
+.yellow{color:yellow;border-color:yellow;}
+.green2{color:#00ff66;border-color:#00ff66;}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+<img src="https://freeimage.host/i/fhQxN7j" alt="Site Logo">
+</div>
+
+<div class="warning">
+This site contains 18+ contents.
+</div>
+
+<div class="buttons">
+<button class="btn green" onclick="enterSite()">I'M 18+</button>
+<button class="btn red" onclick="exitSite()">Exit</button>
+</div>
+
+<div class="network" id="networkStatus"></div>
+
+</div>
+
+<script>
+let delay = 1000;
+
+function detectNetwork(){
+    let net = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    let status = document.getElementById("networkStatus");
+
+    if(!net){
+        status.innerHTML = `<span class="circle yellow"></span> Medium Network • 1 sec`;
+        delay = 1000;
+        return;
+    }
+
+    if(net.effectiveType.includes("2g")){
+        status.innerHTML = `<span class="circle orange"></span> Slow Network • 1.8 sec`;
+        delay = 180  width:100%;
 }
 
 /* ===== BLOODY TEXT ===== */
